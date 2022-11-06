@@ -1,30 +1,43 @@
 <html>
     <head>
         <script src="prob3.js"></script>
+        <link rel="stylesheet" href="prob3.css">
     </head>
     <body>
-        <container class="main_container">
-            <h1> Prob 3 HTML File</h1>
+        <div class="main_container">
+            
             <div class = "content_container">
-                <input type = text />
-                <button type=submit>Search</button>
-            </div>
-            <column class="Right1">
-                <p>User Profile</p>
-                <img />
-                <label>Name</label>
-                <label>Username</label>
-                <label>Email</label>
-                <label>Location</label>
-                <label>Number Of Gists</label>
-            </column>
-            <column class="Left1">
-                <p>User Repos</p>
+                <h1> Prob 3 HTML File</h1>
+                <input type = text id="userText"/>
+                <button type=input onclick=onSearch()>Search</button>
+                <div class="row">
+                    <div class="leftColumn">
+                        <p>User Profile</p>
+                            <div class="columnContent">
+                            <div class= "imgContainer"><img  id="profileImage" src=""/></div>
+                            <label class="displayLabel">Name</label>
+                            <label class="valueLabel" id="displaynameText"></label>
+                            <label class="displayLabel">Username</label>
+                            <label class="valueLabel" id="usernameText"></label>
+                            <label class="displayLabel">Email</label>
+                            <label class="valueLabel" id="emailText"></label>
+                            <label class="displayLabel">Location</label>
+                            <label class="valueLabel" id="locationText"></label>
+                            <label class="displayLabel">Number Of Gists</label>
+                            <label class="valueLabel" id="GistsText"></label>
+                            </div>
+                    </div>
+                    <div class="rightColumn">
+                        <p>User Repos</p>
+                        <ol id="reposList">
+                        </ol>
+                    </div>
+                </div>
                 
-            </column>
-            <footer>
+                <footer>
 
-            </footer>
-    </container>
+                </footer>
+            </div>
+        </div>
     </body>
 </html>
