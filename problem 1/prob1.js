@@ -21,19 +21,22 @@ const createContact =  () => {
     console.log(contactsTableArray)
 }
 
-// const searchfunction = () =>{
-//     let filter = document.getElementById('myInput').value;
-//     let contactTable = document.getElementById('contactTable');
-//     let tr = contactTable.getElementsByTagName('tr');
-//     for (var i = 0; i < tr.length; i++){
-//         let td = tr[i].getElementsByTagName('td')[0];
-//         if (td){let textvalue = td.textContent }
-//     }
-// }
-// const searchContact =  () => {
-//         document.addEventListener(onkeyup,() => {
-//             document.querySelectorAll(".search-input"). foreach(inputField => {
-//                 const tableRows = inputField.closest("table").querySelectorAll("tbody tr");
-//             })
-//         })
-// }
+const searchfunction = () => {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search_box");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("contactTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+
