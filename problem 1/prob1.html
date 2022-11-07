@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script src="prob1.js"></script>
+        <link rel="stylesheet" href="prob1.css">
+    </head>
+    <body>
+        <div class="main_container">
+            
+            <div class = "content_container">
+                <h1> Prob 1 HTML File</h1>
+                <input type = text id="userText" placeholder="Enter Name"/>
+                <input type = text id="userPhone"placeholder="Enter phone "/>
+                <input type = text id="userEmail" placeholder="Enter Email"/>
+                <button type=submit onclick=createContact()>Add Contact</button>
+                <br>
+                <input type = "search" id = "myInput" placeholder = "Search By Phone number" onkeyup = "
+                searchfunction()">
+                <!-- <div class="searchContactRow">
+                    <input type = text id="searchPhone" onkeyup = "searchContact()"placeholder="Search By Phone number"/>
+                </div> -->
+                <div class="Tablerow">
+                    <div class="column1">
+                        <p>Contacts List</p>
+                            <div class="columnContent">
+                                <table id="contactTable">
+                                    <tr><th>Name</th><th>Contact No</th><th>Email</th></tr>
+                                    <tr id="contactTableData">
+                                        <td id="contactName">Shaho</td>
+                                        <td id="contactNo">0873951230</td>
+                                        <td id="contactEmail">Shaho@shaho.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="contactName">Shaho</td>
+                                        <td id="contactNo">0873951230</td>
+                                        <td id="contactEmail">Shaho@shaho.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="contactName">Shaho</td>
+                                        <td id="contactNo">0873951230</td>
+                                        <td id="contactEmail">Shaho@shaho.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="contactName">Shaho</td>
+                                        <td id="contactNo">0873951230</td>
+                                        <td id="contactEmail">Shaho@shaho.com</td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                    </div>
+                </div>
+                
+                <footer>
+                    <p>Total number of Contacts</p>                            
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
